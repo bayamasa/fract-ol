@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
+#include "mlx/mlx.h"
 
 int key_hook()
 {
@@ -17,6 +18,6 @@ int	main()
 	mlx_ptr = mlx_init();
 	win_ptr = mlx_new_window(mlx_ptr, 800, 600, "mlx_new_window");
 	mlx_key_hook(win_ptr, key_hook, 0);
-	mlx_loop(mlx_ptr);	
+	mlx_loop(mlx_ptr);
 	return (0);
 }
